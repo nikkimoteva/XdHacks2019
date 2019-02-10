@@ -1,3 +1,7 @@
+# Author: Nikki Motevaselolhagh
+# Date: Feb 9, 2019
+# Purpose: create a dynamic database for the information received from a parsed text
+
 from flask import Flask, render_template, request
 import sqlite3 as sql
 from PDFOCR import getInformation

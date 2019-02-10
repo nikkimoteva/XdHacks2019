@@ -1,10 +1,8 @@
 from urllib.request import urlopen
 from bs4 import BeautifulSoup
-
+from PDFOCR import getInformation
 
 url_base = "https://www.canada.ca/en/health-canada/services/food-nutrition/healthy-eating/nutrient-data/nutrient-value-some-common-foods-2008.html#a8"
-
-
 
 fruit_list = {}
 veggie_list = {}
@@ -87,13 +85,12 @@ def mergeSort(toBeSorted):
         mid = len(toBeSorted) // 2
         left = toBeSorted[:mid]
         right = toBeSorted[mid:]
-
         mergeSort(left)
         mergeSort(right)
-
         leftCounter = 0
         rightCounter = 0
         totalCounter = 0
+
         while leftCounter < len(left) and rightCounter < len(right):
             if left[leftCounter][1] < right[rightCounter][1]:
                 toBeSorted[totalCounter] = left[leftCounter]
@@ -103,34 +100,31 @@ def mergeSort(toBeSorted):
                 rightCounter = rightCounter + 1
             totalCounter = totalCounter + 1
 
+
         while leftCounter < len(left):
             toBeSorted[totalCounter] = left[leftCounter]
             leftCounter = leftCounter + 1
             totalCounter = totalCounter + 1
 
+
         while rightCounter < len(right):
-            toBeSorted[totalCounter] = right[rightCounter]
+            toBeSorted[totalCounter]=right[rightCounter]
             rightCounter = rightCounter + 1
             totalCounter = totalCounter + 1
 
 notsoup = parse_url(url_base)
 get_fruits(notsoup)
 get_veggies(notsoup)
-new_list = ['Sugar']
-bestVeggiesList = findBest(new_list, veggie_list)
-bestFruitsList = findBest(new_list, fruit_list)
-bestVeggiesList.reverse()
-bestFruitsList.reverse()
-i = 0
-k = 0
-while i < 5:
-    print(bestVeggiesList[i][0])
-    i = i + 1
+input_list = []
+list = getInformation()
+counter = 0
+while counter < 5:
+    if list[counter][3] > 0:
+        input_list.append(list[counter][0])
+    counter = counter + 1
 
-print('==========================')
-while k < 5:
-    print(bestFruitsList[k][0])
-    k = k + 1
+
+print(input_list)
 
 
 

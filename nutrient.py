@@ -123,8 +123,19 @@ while counter < 5:
         input_list.append(list[counter][0])
     counter = counter + 1
 
+# print(input_list)
+bestVeggiesList = findBest(input_list, veggie_list)
+bestFruitsList = findBest(input_list, fruit_list)
+bestFruitsList = bestFruitsList[:5]
+bestVeggiesList = bestVeggiesList[:5]
+newFruitsList = []
+newVeggiesList = []
+i = 0
+while i < 5:
+    newFruitsList.append(bestFruitsList[i][0])
+    newVeggiesList.append(bestVeggiesList[i][0])
+    i = i + 1
 
-print(input_list)
-
-
-
+finalList = [newFruitsList, newVeggiesList]
+#fruit returns first then veggies
+return finalList

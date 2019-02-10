@@ -13,16 +13,12 @@ def home():
 
 @app.route('/upload', methods=['GET'])
 def addrec():
-    print('hi hello')
     try:
-        print('adsfasdf')
         msg = 'test'
         # TODO do the parse logic here
         parsedPDF = getInformation()
-        print('goasdf')
         with sql.connect("database.db") as con:
             cur = con.cursor()
-            print('hi')
             for row in parsedPDF:
                 print(row)
                 cur.execute("INSERT INTO bloodMD (title, results, range, analysis) VALUES(?, ?, ?, ?)",
@@ -38,6 +34,26 @@ def addrec():
         return msg
         con.close()
 
+@app.route('/getdata', methods=['GET'])
+def getData():
+    msg = 'test'
+    try:
+        with sql.connect("database.db") as con:
+            rows = getInformation()
+            #cur = con.cursor()
+            #rows = cur.fetchall()
+            #for row in rows:
+            #    print(row)
+            #print("test")
+            print(rows)
+            msg = str(rows)
+    except:
+        con.rollback()
+        msg = "error in insert operation"
+
+    finally:
+        return msg
+        con.close()
 
 if __name__ == '__main__':
     app.run(debug=True)

@@ -21,7 +21,7 @@ def addrec():
     try:
         print('adsfasdf')
         msg = 'test'
-        # TODO do the parse logic here
+        # do the parse logic here
         parsedPDF = getInformation()
         print('goasdf')
         with sql.connect("database.db") as con:

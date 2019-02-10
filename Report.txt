@@ -1,0 +1,101 @@
+Patient: MOTEVASELOLHAGH, NIKKI
+Age: 19 years Sex: F
+Date of Birth: May 21 1999
+PHN: 9737194702 BC
+Patient's Phone: (604)783-4249
+Lab No: 18-143328012
+Patient ID:
+Collected on: Nov 24 2018 06:57
+Reported on: Nov 24 2018 15:30
+Reported by: LifeLabs
+Telephone: 604-431-7206
+Toll Free: 1-800-431-7206
+Fax: 604-412-4445
+Printed on: 2019-02-09 15:05
+Page1 of 2
+Ordered by: JALALI Dr. ARASH
+Reported to: JALALI Dr. ARASH
+Test Flag Result Reference Range - Units
+Hematology
+WBC 6.5 4.0-10.0 10*9/L
+RBC 4.63 3.50-5.00 10*12/L
+Hemoglobin 133 115-155 g/L
+Hematocrit 0.41 0.35-0.45 L/L
+MCV 88 82-98 fl
+MCH 28.7 27.5-33.5 pg
+MCHC 328 300-370 g/L
+RDW 12.7 11.5-14.5 %
+Platelet Count 213 150-400 10*9/L
+Differential
+Neutrophils 3.0 2.0-7.5 10*9/L
+Lymphocytes 3.0 1.0-4.0 10*9/L
+Monocytes 0.4 0.1-0.8 10*9/L
+Eosinophils 0.1 0.0-0.7 10*9/L
+Basophils 0.0 0.0-0.2 10*9/L
+Granulocytes Immature 0.0 0.0-0.1 10*9/L
+For Hematology Reporting Changes and
+RBC Morphology Grading, please visit
+LifeLabs BC Website at
+http://www.lifelabs.com/sites/content_
+authoring/healthcare-providers/
+Physician%20Newsletters/HCP%20Newsletter
+%20June%202018%20FINAL.pdf
+Biochemical Investigation of Anemias and Iron Overload
+Ferritin 33 15-247 ug/L
+Adults: <15: diagnostic of Iron Deficiency
+15-50: Probable Iron Deficiency
+51-100: Possible Iron Deficiency
+>100: Iron Deficiency unlikely
+persistently >600: Test for Iron overload
+Children: <12: diagnosis of Iron Deficiency
+http://www2.gov.bc.ca/gov/content/health/
+practitioner-professional-resources/bcguidelines/
+iron-overload
+FINAL RESULTS
+This report contains confidential information intended for view by authorized person(s) only, and should be shredded before discarding.
+Note to physicians: This report has been printed by the patient - the contents should be confirmed by accessing Excelleris or source laboratory reports.
+Note to patients: Please contact your physician if you have any questions regarding the results on this report.
+Patient: MOTEVASELOLHAGH, NIKKI
+Age: 19 years Sex: F
+Date of Birth: May 21 1999
+PHN: 9737194702 BC
+Patient's Phone: (604)783-4249
+Lab No: 18-143328012
+Patient ID:
+Collected on: Nov 24 2018 06:57
+Reported on: Nov 24 2018 15:30
+Reported by: LifeLabs
+Telephone: 604-431-7206
+Toll Free: 1-800-431-7206
+Fax: 604-412-4445
+Printed on: 2019-02-09 15:05
+Page2 of 2
+Ordered by: JALALI Dr. ARASH
+Reported to: JALALI Dr. ARASH
+Test Flag Result Reference Range - Units
+General Chemistry
+Glucose Fasting 4.8 3.3-5.5 mmol/L
+Sodium 139 135-145 mmol/L
+Potassium 1000 3.5-5.0 mmol/L
+Creatinine 75 45-90 umol/L
+Estimated GFR 100 >=60
+Units for eGFR are mL/min/1.73sq.m
+Kidney function estimate based on
+assumption of a stable serum creatinine
+concentration: diet, drugs, pregnancy,
+clinical state and muscle mass can affect
+accuracy of the estimate. Urinary ACR may
+assist interpretation.
+See www.bcguidelines.ca/pdf/ckd.pdf
+Calcium 2.46 2.10-2.60 mmol/L
+ALT 24 <36 U/L
+Thyroid Function
+TSH 2.43 0.47-3.41 mU/L
+The free T4 order was cancelled. The
+BCMA/MSP Protocol recommends no further
+testing. However, a specimen will be
+stored 4 days.
+FINAL RESULTS
+This report contains confidential information intended for view by authorized person(s) only, and should be shredded before discarding.
+Note to physicians: This report has been printed by the patient - the contents should be confirmed by accessing Excelleris or source laboratory reports.
+Note to patients: Please contact your physician if you have any questions regarding the results on this report.

@@ -1,4 +1,4 @@
-file = open("C:/Users/Andrew/Desktop/Report.txt", "r")
+file = open("Report.txt", "r")
 #print(file.read())
 
 # Information Indices
@@ -102,7 +102,7 @@ def getInformation():
             userdata.insert(0, line.partition(patient_keyword)[2])
 
     returnList = list()
-    returnList.append(userdata)
+    #returnList.append(userdata)
     returnList.append(potassium)
     returnList.append(sodium)
     returnList.append(iron)
@@ -119,5 +119,3 @@ def getInformation():
     print(returnList)
     file.close()
     return(returnList)
-
-getInformation()

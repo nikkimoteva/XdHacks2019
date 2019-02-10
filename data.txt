@@ -1,0 +1,4 @@
+conversion_factor_value 0.42265
+food_code 45
+food_description Cheese
+measure_name 100ml grated

@@ -3,7 +3,7 @@ import sqlite3 as sql
 from PDFOCR import getInformation
 
 
-app = Flask(__name__)
+app = Flask(__name__, template_folder='webpage')
 
 
 @app.route('/')
@@ -38,22 +38,25 @@ def addrec():
 def getData():
     msg = 'test'
     try:
-        with sql.connect("database.db") as con:
-            rows = getInformation()
+        #with sql.connect("database.db") as con:
+        rows = getInformation()
             #cur = con.cursor()
             #rows = cur.fetchall()
             #for row in rows:
             #    print(row)
             #print("test")
-            print(rows)
-            msg = str(rows)
+        print(rows)
+        msg = str(rows)
     except:
-        con.rollback()
-        msg = "error in insert operation"
+        msg = "Error displaying information"
 
     finally:
         return msg
         con.close()
+
+@app.route('/home', methods=['GET'])
+def render_static():
+    return render_template('index.html')
 
 if __name__ == '__main__':
     app.run(debug=True)

@@ -1,10 +1,14 @@
-from flask import Flask, render_template, request
+import os
+from flask import Flask, flash, render_template, request, url_for, redirect, send_from_directory
 import sqlite3 as sql
 from PDFOCR import getInformation
+from werkzeug.utils import secure_filename
 
+UPLOAD_FOLDER = '/uploads'
+ALLOWED_EXTENSIONS = set(['txt'])
 
 app = Flask(__name__, template_folder='webpage')
-
+app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 
 @app.route('/')
 def home():
@@ -57,6 +61,55 @@ def getData():
 @app.route('/home', methods=['GET'])
 def render_static():
     return render_template('index.html')
+
+@app.route('/summary', methods=['GET'])
+def render_summary_static():
+    return render_template('summary.html')
+
+def allowed_file(filename):
+    return '.' in filename and \
+        filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS
+
+@app.route('/', methods=['GET','POST'])
+def upload_file():
+    if request.method == 'POST':
+        if 'file' not in request.files:
+            flash('No file part')
+            return redirect(request.url)
+        file = request.files['file']
+        if file.filename == '':
+            flash('No selected file')
+            return redirect(request.url)
+        if file and allowed_file(file.filename):
+            filename = secure_filename(file.filename)
+            file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
+        return
+
+@app.route("/test", methods={"POST"})
+def test():
+    totalInfo = getInformation()
+
+    # User Value
+    userPotassium = totalInfo[0][1]
+    userSodium = totalInfo[1][1]
+    userIron = totalInfo[2][1]
+    userGlucose = totalInfo[3][1]
+    userCalcium = totalInfo[4][1]
+
+    # User Discrepancy
+    potassiumLevel = totalInfo[0][3]
+    sodiumLevel = totalInfo[1][3]
+    ironLevel = totalInfo[2][3]
+    glucoseLevel = totalInfo[3][3]
+    calciumLevel = totalInfo[4][3]
+
+    # Recommended Range
+    potassiumRange = totalInfo[0][2]
+    sodiumRange = totalInfo[1][2]
+    ironRange = totalInfo[2][2]
+    glucoseRange = totalInfo[3][2]
+    calciumRange = totalInfo[4][2]
+    return render_template("summary.html",potassiumLevel=potassiumLevel, sodiumLevel=sodiumLevel, ironLevel=ironLevel, glucoseLevel=glucoseLevel, calciumLevel=calciumLevel, potassiumRange=potassiumRange, sodiumRange=sodiumRange, ironRange=ironRange, glucoseRange=glucoseRange, calciumRange=calciumRange, userCalcium=userCalcium, userGlucose=userGlucose, userIron=userIron, userPotassium=userPotassium, userSodium=userSodium)
 
 if __name__ == '__main__':
     app.run(debug=True)

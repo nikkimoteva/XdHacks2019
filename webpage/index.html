@@ -20,8 +20,9 @@
 		<!--
 		CSS
 		============================================= -->
-		<link rel="stylesheet" href="css/bootstrap.css">
-		<link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.css') }}">
+
 	</head>
 	<body>
 		<div class="main-wrapper-first">
@@ -45,12 +46,12 @@
                                 <h4 class="text-white"> Upload your blood test to get results.</h4>
                                 <br><br/>
 
-                                
-                                <form action="upload.php" method="post" enctype="multipart/form-data">
-                                    <input accept="file_extension" type="file">
-                                    <input class="genric-btn primary-border circle" type="submit" name="submit" value="upload" onclick="summary.html">
+
+                                <form action="{{url_for('upload_file')}}" method="post" enctype="multipart/form-data">
+                                    <input name="file" type="file">
+                                <a href="http://127.0.0.1:5000/summary" class="button">Confirm Upload</a>
                                 </form>
-                                
+
 							</div>
 						</div>
 					</div>

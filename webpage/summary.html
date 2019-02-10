@@ -6,13 +6,14 @@
 
 	<link href="https://fonts.googleapis.com/css?family=Poppins:300,500,600" rel="stylesheet">
     <!--CSS -->
-		<link rel="stylesheet" href="css/bootstrap.css">
-		<link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.css') }}">
     <!--JS -->
-        <script type="text/javascript" src="display.js"></script>
+        <script type="text/javascript" src="{{ url_for('static', filename='js/display.js') }}"></script>
 
 </head>
-	<body>
+    {% block body %}
+	<body onload="display()">
 		<div class="main-wrapper-first">
             <div class="banner-area">
 				<div class="container">
@@ -20,12 +21,16 @@
 						<div class="col-lg-5">
 							<div class="banner-content text-center">
 								<h1 id="username" class="text-white text-uppercase">SUMMARY</h1>
+                                <form action="{{url_for('test')}}" method="post">
+                                    <input type="text" name="name" placeholder="Enter Your Name">
+                                     <button>Submit</button>
+                                </form>
 							</div>
 						</div>
 					</div>
 				</div>
 			</div>
-            
+
 
 			<!-- Start Lacking Area -->
 			<section class="featured-area">
@@ -34,24 +39,22 @@
 
                     <h3 class="text-heading">Top 5 Important Nutrients: </h3>
                     <div id="nutrientInfo"class="container">
+
 					<div class="row">
 						<div class="col-md-8">
                                  <!-- NUTRITION TYPE -->
 								<div>
-									<h4 class="title text-uppercase nutritionName">IRON</h4>
-                                    <p id="userInfo">Your nutrition information: </p>
+									<h4 class="title text-uppercase nutritionName">potassium</h4>
+                                    <p id="potassiumLevel">Your Value: {{ userPotassium }} || Recommended Range: {{ potassiumRange }} || Range Discrepancy: {{ potassiumLevel }}</p>
 								        <div>
 									       <ul class="unordered-list">
-										      <li>Spinach
+										       <li><p id="potassiumFood1">Bananas are our recommendation for your potassium deficiency!</p></li>
+                                              <li><p id="potassiumFood1Fact"></p></li>
+										      <li>Other Recommended Foods
                                                 <ul>
-                                                    <li>Spinach has 5mg of iron/lb</li>
-                                                </ul>
-                                                </li>
-										      <li>Food type
-                                                <ul>
-                                                    <li>...</li>
-                                                    <li>...</li>
-                                                    <li>...</li>
+                                                    <li></li>
+                                                    <li></li>
+                                                    <li></li>
                                                 </ul>
                                                 </li>
 									       </ul>
@@ -59,10 +62,104 @@
 								</div>
 						</div>
 					</div>
+						<br>
+					<div class="row">
+						<div class="col-md-8">
+                                 <!-- NUTRITION TYPE -->
+								<div>
+									<h4 class="title text-uppercase nutritionName">sodium</h4>
+                                    <p id="sodiumLevel">0.0</p>
+								        <div>
+									       <ul class="unordered-list">
+										      <li><p id="sodiumFood1">Your sodium level is quite high! We recommend other alternatives!</p></li>
+                                              <li><p id="sodiumFood1Fact"></p></li>
+										      <li>Other Recommended Foods
+                                                <ul>
+                                                    <li><p id="sodiumFood2">Eggs</p></li>
+                                                    <li><p id="sodiumFood3">Peanut Butter</p></li>
+                                                    <li><p id="sodiumFood4">Beans</p></li>
+                                                </ul>
+                                                </li>
+									       </ul>
+                                        </div>
+								</div>
+						</div>
+					</div>
+						<br>
+					<div class="row">
+						<div class="col-md-8">
+                                 <!-- NUTRITION TYPE -->
+								<div>
+									<h4 class="title text-uppercase nutritionName">IRON</h4>
+                                    <p id="ironLevel">0.0</p>
+								        <div>
+									       <ul class="unordered-list">
+										      <li><p id="ironFood1">Spinach are our recommendation for your iron deficiency!</p></li>
+                                              <li><p id="ironFood1Fact"></p></li>
+										      <li>Other Recommended Foods
+                                                <ul>
+                                                    <li><p id="ironFood2">Liver</p></li>
+                                                    <li><p id="ironFood3">Salmon</p></li>
+                                                    <li><p id="ironFood4">Halibut</p></li>
+                                                </ul>
+                                                </li>
+									       </ul>
+                                        </div>
+								</div>
+						</div>
+					</div>
+						<br>
+					<div class="row">
+						<div class="col-md-8">
+                                 <!-- NUTRITION TYPE -->
+								<div>
+									<h4 class="title text-uppercase nutritionName">sugar</h4>
+                                    <p id="sugarLevel">0.0</p>
+								        <div>
+									       <ul class="unordered-list">
+										      <li><p id="sugarFood1">Your glucose level is quite high! We recommend other alternatives!</p></li>
+                                              <li><p id="sugarFood1Fact"></p></li>
+										      <li>Other Recommended Foods
+                                                <ul>
+                                                    <li><p id="sugarFood2">Apples</p></li>
+                                                    <li><p id="sugarFood3">Bananas</p></li>
+                                                    <li><p id="sugarFood4">Mango</p></li>
+                                                </ul>
+                                                </li>
+									       </ul>
+                                        </div>
+								</div>
+						</div>
+					</div>
+						<br>
+					<div class="row">
+						<div class="col-md-8">
+                                 <!-- NUTRITION TYPE -->
+								<div>
+									<h4 class="title text-uppercase nutritionName">calcium</h4>
+                                    <p id="calciumLevel">0.0</p>
+								        <div>
+									       <ul class="unordered-list">
+										      <li><p id="calciumFood1">Your calcium levels are great! Here are some foods to maintain it!</p></li>
+                                              <li><p id="calciumFood1Fact"></p></li>
+										      <li>Other Recommended Foods
+                                                <ul>
+                                                    <li><p id="calciumFood2">Milk</p></li>
+                                                    <li><p id="calciumFood3">Yogurt</p></li>
+                                                    <li><p id="calciumFood4">Cheese</p></li>
+                                                </ul>
+                                                </li>
+									       </ul>
+                                        </div>
+								</div>
+						</div>
+					</div>
+						<br>
                     </div>
 					</div>
 			</section>
 			<!-- End Nutrition Area -->
 		</div>
 	</body>
+    {% endblock %}
 </html>

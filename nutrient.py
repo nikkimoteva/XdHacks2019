@@ -112,30 +112,31 @@ def mergeSort(toBeSorted):
             rightCounter = rightCounter + 1
             totalCounter = totalCounter + 1
 
-notsoup = parse_url(url_base)
-get_fruits(notsoup)
-get_veggies(notsoup)
-input_list = []
-list = getInformation()
-counter = 0
-while counter < 5:
-    if list[counter][3] > 0:
-        input_list.append(list[counter][0])
-    counter = counter + 1
 
-# print(input_list)
-bestVeggiesList = findBest(input_list, veggie_list)
-bestFruitsList = findBest(input_list, fruit_list)
-bestFruitsList = bestFruitsList[:5]
-bestVeggiesList = bestVeggiesList[:5]
-newFruitsList = []
-newVeggiesList = []
-i = 0
-while i < 5:
-    newFruitsList.append(bestFruitsList[i][0])
-    newVeggiesList.append(bestVeggiesList[i][0])
-    i = i + 1
+def nutrientInit(stuff, value):
+    notsoup = parse_url(url_base)
+    get_fruits(notsoup)
+    get_veggies(notsoup)
+    input_list = [stuff]
+    # list = getInformation()
+    # counter = 0
+    # while counter < 5:
+    #     if list[counter][3] > 0:
+    #         input_list.append(list[counter][0])
+    #     counter = counter + 1
 
-finalList = [newFruitsList, newVeggiesList]
-#fruit returns first then veggies
-return finalList
+    # print(input_list)
+    bestVeggiesList = findBest(input_list, veggie_list)
+    bestFruitsList = findBest(input_list, fruit_list)
+    bestFruitsList = bestFruitsList[:5]
+    bestVeggiesList = bestVeggiesList[:5]
+    newFruitsList = []
+    newVeggiesList = []
+    i = 0
+    while i < value:
+        newFruitsList.append(bestFruitsList[i][0])
+        newVeggiesList.append(bestVeggiesList[i][0])
+        i = i + 1
+
+    finalList = [newFruitsList, newVeggiesList]
+    return finalList

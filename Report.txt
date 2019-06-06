@@ -1,11 +1,11 @@
-Patient: MOTEVASELOLHAGH, NIKKI
-Age: 19 years Sex: F
-Date of Birth: May 21 1999
-PHN: 9737194702 BC
-Patient's Phone: (604)783-4249
-Lab No: 18-143328012
+Patient: Smith, Jane
+Age: xx years Sex: F
+Date of Birth: xxxx
+PHN: xxxx
+Patient's Phone: xxxx
+Lab No: xxxx
 Patient ID:
-Collected on: Nov 24 2018 06:57
+Collected on: xx
 Reported on: Nov 24 2018 15:30
 Reported by: LifeLabs
 Telephone: 604-431-7206
@@ -13,8 +13,8 @@ Toll Free: 1-800-431-7206
 Fax: 604-412-4445
 Printed on: 2019-02-09 15:05
 Page1 of 2
-Ordered by: JALALI Dr. ARASH
-Reported to: JALALI Dr. ARASH
+Ordered by: xxxx
+Reported to: xxxx
 Test Flag Result Reference Range - Units
 Hematology
 WBC 6.5 4.0-10.0 10*9/L
@@ -55,14 +55,14 @@ FINAL RESULTS
 This report contains confidential information intended for view by authorized person(s) only, and should be shredded before discarding.
 Note to physicians: This report has been printed by the patient - the contents should be confirmed by accessing Excelleris or source laboratory reports.
 Note to patients: Please contact your physician if you have any questions regarding the results on this report.
-Patient: MOTEVASELOLHAGH, NIKKI
-Age: 19 years Sex: F
-Date of Birth: May 21 1999
-PHN: 9737194702 BC
-Patient's Phone: (604)783-4249
-Lab No: 18-143328012
+Patient: Smith, Jane
+Age: xx years Sex: F
+Date of Birth: xxxx
+PHN: xxxx
+Patient's Phone: xxxx
+Lab No: xxxx
 Patient ID:
-Collected on: Nov 24 2018 06:57
+Collected on: xx
 Reported on: Nov 24 2018 15:30
 Reported by: LifeLabs
 Telephone: 604-431-7206
@@ -70,8 +70,8 @@ Toll Free: 1-800-431-7206
 Fax: 604-412-4445
 Printed on: 2019-02-09 15:05
 Page2 of 2
-Ordered by: JALALI Dr. ARASH
-Reported to: JALALI Dr. ARASH
+Ordered by: xxxx
+Reported to: xxxx
 Test Flag Result Reference Range - Units
 General Chemistry
 Glucose Fasting 4.8 3.3-5.5 mmol/L
